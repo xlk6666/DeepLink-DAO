@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.png'); /* 将URL替换为您选择的图片URL */
+    background-repeat: no-repeat; /* 设置背景图像不重复 */
+    background-position: center; /* 设置背景图像居中 */
+    background-size: 100%; /* 设置背景图像大小以覆盖整个元素 */
+    background-attachment: fixed; /* 设置背景图像为固定，使其不随页面滚动 */
+}
+
+/* 适应平板设备 */
+@media (max-width: 768px) {
+    body {
+        background-position: top; /* 或根据需要调整 */
+        background-size: auto 100%; /* 设置背景图像的高度为100%，宽度自动 */
+    }
+}
+
+/* 适应手机设备 */
+@media (max-width: 480px) {
+    body {
+        background-position: center; /* 或根据需要调整 */
+        background-size: 100% auto; /* 设置背景图像的宽度为100%，高度自动 */
+    }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px 3px 161px;
+    background-color: transparent; /* 将导航栏背景设置为透明 */
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.logo-image{
+    width: 38px;
+    height: 35px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ...其他样式保持不变... */
+
+.nav-item {
+
+    background-image: url('button_system.svg'); /* 使用SVG图像作为背景 */
+    background-repeat: no-repeat; /* 禁止背景图像重复 */
+    background-position: center; /* 将背景图像居中 */
+    background-size: cover; /* 调整背景图像大小以覆盖整个按钮 */
+    
+    position: relative; /* 设置为相对定位，以便在其内部定位伪元素 */
+    margin-left: 24px;
+    background-color: #8247FF; /* 更改背景颜色 */
+    color: #47FFD3; /* 更改字体颜色 */
+    font-family: 'Montserrat', sans-serif; /* 设置字体为Montserrat */
+    font-weight: 800; /* 设置字体权重为ExtraBold */
+    font-size: 14px;
+    border: none;
+    border-radius: 4px; /* 更改圆角大小 */
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+
+/* ...其他样式保持不变... */
+
+.nav-item:hover {
+    background-color: #0056B3; /* 更改鼠标悬停时的背景颜色 */
+}
+
+
+/* 正文 */
+
+/* 导入Montserrat字体 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+
+/* title-container样式：包含所有文本 */
+.title-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+/* 通用段落文本样式 */
+.paragraph-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #5E6B7E;
+}
+
+/* P1文本样式 */
+.p1 {
+    position: absolute;
+    top: 90px; /* P1文本距离网页顶部的位置 */
+    width: 100%;
+    font-size: 18px;
+}
+
+/* site-title样式 */
+.site-title {
+    position: absolute;
+    top: calc(90px + 18px + 20px); /* 计算H1文本距离网页顶部的位置 */
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 1.1;
+    color: #FFF;
+    margin: 0;
+}
+
+/* site-title内行内元素样式 */
+.site-title span {
+    display: inline;
+}
+
+/* P2文本样式 */
+.p2 {
+    position: absolute;
+    top: calc(210px + 18px + 20px + 80px + 20px - 50px); /* 计算P2文本距离网页顶部的位置并向上移动10px */
+    width: 100%;
+    font-size: 18px;
+    color: #DDDDDD;
+    font-size: 10px
+    font-weight: 0; /* 设置P2字体粗细为Regular */
+    
+}
+
+
+/* 申请按钮 */
+/* 在此处添加原有的.nav-item样式，您之前提到的导航栏按钮样式 */
+.nav-item {
+    background-color: #8247FF;
+    color: #47FFD3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 添加join-btn样式 */
+.join-btn {
+    position: absolute; /* 使用绝对定位 */
+    top: 690px; /* 按钮距离网页顶部的位置 */
+    left: calc(50% - 30px); /* 按钮在水平方向上居中，并向左移动30px */
+    transform: translateX(-50%); /* 使用CSS变换进行微调，使按钮完全居中 */
+    color: #black;
+}
+
+/* 小球浮动的效果 */
+
+/* 添加浮动小球的通用样式 */
+.floating-ball {
+    position: absolute; /* 使用绝对定位 */
+    width: 100px; /* 设置小球宽度 */
+    height: 100px; /* 设置小球高度 */
+    object-fit: cover; /* 保持图片比例 */
+    animation-duration: 3s; /* 设置动画持续时间 */
+    animation-iteration-count: infinite; /* 设置动画无限循环 */
+    animation-timing-function: ease-in-out; /* 设置动画速度曲线 */
+}
+
+/* 定义浮动动画关键帧 */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* 为每个小球设置特定的位置和动画 */
+.ball1 {
+    left: 300px;
+    top: 300px;
+    animation-name: float; /* 应用浮动动画 */
+}
+
+.ball2 {
+    left: 450px;
+    top: 750px;
+    animation-name: float; /* 应用浮动动画 */
+    animation-delay: 1s; /* 添加延迟，使动画有不同的节奏 */
+}
+
+.ball3 {
+    left: 1350px;
+    top: 350px;
+    width: 150px; /* 设置小球宽度 */
+    height: 150px; /* 设置小球高度 */
+    animation-name: float; /* 应用浮动动画 */
+    animation-delay: 2s; /* 添加延迟，使动画有不同的节奏 */
+}
+.ball4 {
+    left: 1250px;
+    top: 750px;
+    animation-name: float; /* 应用浮动动画 */
+    animation-delay: 1s; /* 添加延迟，使动画有不同的节奏 */
+}
+
+/* 其他样式保持不变 */
+
+/* 人物图片 */
+/* 添加walking-person样式 */
+
+.walking-person {
+    position: absolute; /* 使用绝对定位 */
+    width: 300px; /* 设置人物宽度为150px */
+    height: auto; /* 设置人物高度保持图片比例 */
+    left: calc(50% - 150px); /* 设置初始水平位置在画面中心左侧30px处 */
+    bottom: -600px; /* 设置初始垂直位置在画面底部 */
+    animation: walk 5s forwards; /* 应用走路动画，持续时间5秒，并保持动画结束时的状态 */
+    transform-origin: 50% 100%; /* 设置变换的基点为人物底部中心 */
+    z-index: -1; /* 将人物图层放在文字图层下方 */
+}
+
+/* 定义走路动画关键帧 */
+@keyframes walk {
+    0% {
+        transform: scale(1) translateZ(0); /* 动画开始时，人物的大小为原始大小，位于较近的深度位置 */
+    }
+    100% {
+        transform: scale(0.7) translateZ(1000px); /* 动画结束时，人物的大小为原始大小的一半，位于较远的深度位置 */
+    }
+}
